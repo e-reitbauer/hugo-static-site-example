@@ -31,6 +31,8 @@ jobs:
           fetch-depth: 0
       - name: Change into site
         run: cd ./site
+      - name: Check directory
+        run: pwd
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
@@ -79,6 +81,8 @@ jobs:
           key: hugo-${{ github.run_id }}
           restore-keys:
             hugo-
+      - name: Check directory
+        run: pwd
       - name: Build the site
         run: |
           hugo \
@@ -86,6 +90,8 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
+      - name: Check contents
+        run: ls -lah
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v4
