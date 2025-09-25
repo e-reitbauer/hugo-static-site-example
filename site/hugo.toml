@@ -1,0 +1,72 @@
+baseURL = 'https://e-reitbauer.github.io/'
+languageCode = 'en-us'
+title = 'Hugo Example'
+contentDir = 'content'
+enableEmoji = true
+
+[module]
+    [[module.imports]]
+        path = "github.com/colinwilson/lotusdocs"
+        disable = false
+    [[module.imports]]
+        path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+        disable = false
+
+[markup]
+    [markup.tableOfContents]
+      endLevel = 3
+      startLevel = 1
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # https://jdhao.github.io/2019/12/29/hugo_html_not_shown/
+  [markup.goldmark.parser]
+    [markup.goldmark.parser.attribute]
+      block = true
+
+
+[params.assets]
+disableFingerprinting = false
+
+[params.footer]
+copyright = "© 2025 Erik Reitbauer. All rights reserved."
+version = true
+
+[params.social]
+github = "e-reitbauer"
+
+[params.docs]
+title = "Example Docs"
+pathName = "docs"
+darkMode = true
+prism = true
+prismTheme = "lucario"
+
+# UI Options
+breadcrumbs = true
+descriptions = true
+backToTop = true
+navPrevNext = true
+navInDirectory = false
+navDesc = true
+navDescTrunc = 40
+listDescTrunc = 100
+
+# Icon Options
+sidebarIcons = true
+titleIcon = true
+
+# GitInfo Options
+repoURL = "https://github.com/e-reitbauer/hugo-static-site-example"
+repoBranch = "main"
+editPage = true
+lastMod = true
+lastModRelative = true
+
+# Table of Contents
+toc = true
+tocMobile = true
+scrollSpy = true
+
+# Link Options
+intLinkTooltip = true
+extLinkNewTab = true
