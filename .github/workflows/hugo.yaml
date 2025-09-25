@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./page
+        working-directory: site
     env:
       DART_SASS_VERSION: 1.92.1
       GO_VERSION: 1.25.1
