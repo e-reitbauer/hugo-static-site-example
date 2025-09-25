@@ -1,4 +1,4 @@
-baseURL = 'https://e-reitbauer.github.io/'
+baseURL = 'https://e-reitbauer.github.io/hugo-static-site-example/'
 languageCode = 'en-us'
 title = 'Hugo Example'
 contentDir = 'content'
