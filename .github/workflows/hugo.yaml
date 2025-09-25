@@ -17,6 +17,9 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./page
     env:
       DART_SASS_VERSION: 1.92.1
       GO_VERSION: 1.25.1
@@ -29,10 +32,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Change into site
-        run: cd ./site
-      - name: Check directory
-        run: pwd
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
@@ -81,8 +80,6 @@ jobs:
           key: hugo-${{ github.run_id }}
           restore-keys:
             hugo-
-      - name: Check directory
-        run: pwd
       - name: Build the site
         run: |
           hugo \
