@@ -80,8 +80,6 @@ jobs:
       - name: Build the site
         run: |
           hugo \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
-            --cacheDir "${{ runner.temp }}/hugo_cache" \
             --source ./site
       - name: Cache save
         id: cache-save
