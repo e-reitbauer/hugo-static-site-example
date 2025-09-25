@@ -3,9 +3,8 @@ languageCode = 'en-us'
 title = 'Hugo Example'
 contentDir = 'content'
 enableEmoji = true
+publishDir = "public"
 
-[outputs]
-  home = ["HTML"]
 
 [module]
     [[module.imports]]
