@@ -80,11 +80,9 @@ jobs:
       - name: Build the site
         run: |
           hugo \
-            --gc \
-            --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache" \
-            --source site
+            --source ./site
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v4
